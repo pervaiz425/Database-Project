@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Create New Society</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Create New Society</h2>
+      <form action="process_form.php" method="post">
+        <label for="societyName">Society Name:</label>
+        <input type="text" id="societyName" name="societyName" required />
+
+        <label for="membershipFee">Membership Fee:</label>
+        <input
+          type="number"
+          id="membershipFee"
+          name="membershipFee"
+          step="0.01"
+          required
+        />
+
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+          <!-- Populate this dropdown dynamically from your database -->
+          <option value="1">Category 1</option>
+          <option value="2">Category 2</option>
+          <!-- Add more options as needed -->
+        </select>
+
+        <label for="societyDescription">Society Description:</label>
+        <textarea
+          id="societyDescription"
+          name="societyDescription"
+          rows="4"
+        ></textarea>
+
+        <button type="submit">Create Society</button>
+      </form>
+    </div>
+  </body>
+</html>
